@@ -1,27 +1,28 @@
+"""Create a social network graph with networkX library"""
+
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# Create an empty undirected graph
+# Undirected empty graph
 G = nx.Graph()
 
-# Add nodes (people)
-people = ["Alice", "Bob", "Charlie", "Dana", "Eve", "Frank"]
+# Add nodes
+people = ["Ali", "Bob", "Tom", "Dana", "Noah", "Ian"]
 G.add_nodes_from(people)
 
 # Add edges
 friendships = [
-    ("Alice", "Bob"),
-    ("Alice", "Charlie"),
-    ("Bob", "Charlie"),
+    ("Ali", "Bob"),
+    ("Ali", "Tom"),
+    ("Bob", "Tom"),
     ("Bob", "Dana"),
-    ("Charlie", "Dana"),
-    ("Dana", "Eve"),
-    ("Eve", "Frank"),
-    ("Charlie", "Eve"),
+    ("Tom", "Dana"),
+    ("Dana", "Noah"),
+    ("Noah", "Ian"),
+    ("Tom", "Noah"),
 ]
 G.add_edges_from(friendships)
 
-# Analyze basic characteristics
 num_nodes = G.number_of_nodes()
 num_edges = G.number_of_edges()
 degrees = dict(G.degree())
@@ -32,16 +33,16 @@ print("Degree of each node:")
 for node, degree in degrees.items():
     print(f"{node}: {degree}")
 
-# Visualize the graph
+# Graph visualization
 plt.figure(figsize=(8, 6))
 pos = nx.spring_layout(G)
 nx.draw(
     G,
     pos,
     with_labels=True,
-    node_color="lightblue",
     node_size=500,
     font_size=12,
+    node_color="lightblue",
     edge_color="gray",
 )
 plt.title("Social Network Graph")

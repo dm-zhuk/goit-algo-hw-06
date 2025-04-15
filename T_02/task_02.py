@@ -4,17 +4,17 @@ import matplotlib.pyplot as plt
 
 G = nx.Graph()
 """Create the graph"""
-people = ["Alice", "Bob", "Charlie", "Dana", "Eve", "Frank"]
+people = ["Ali", "Bob", "Tom", "Dana", "Noah", "Ian"]
 G.add_nodes_from(people)
 friendships = [
-    ("Alice", "Bob"),
-    ("Alice", "Charlie"),
-    ("Bob", "Charlie"),
+    ("Ali", "Bob"),
+    ("Ali", "Tom"),
+    ("Bob", "Tom"),
     ("Bob", "Dana"),
-    ("Charlie", "Dana"),
-    ("Charlie", "Eve"),
-    ("Dana", "Eve"),
-    ("Eve", "Frank"),
+    ("Tom", "Dana"),
+    ("Tom", "Noah"),
+    ("Dana", "Noah"),
+    ("Noah", "Ian"),
 ]
 G.add_edges_from(friendships)
 
@@ -57,9 +57,9 @@ def bfs_path(graph, start, goal):
     return None  # No path found
 
 
-# Find paths from Alice to Frank
-start_node = "Alice"
-goal_node = "Frank"
+# Find paths from Ali to Ian
+start_node = "Ali"
+goal_node = "Ian"
 
 # Run DFS
 dfs_result = dfs_path(G, start_node, goal_node)
