@@ -47,6 +47,6 @@ BFS is often quicker for finding the shortest path in simple graphs.
 
 ### Visualization
 
-![Social Network Graph](../src/img/social_network1.png)
+![Social Network Graph](../img/social_network1.png)
 
 The graph is visualized using **matplotlib** to show the connections among individuals.

@@ -10,7 +10,7 @@ This project uses Dijkstra algorithm to compute the shortest paths and lengths.
 
 ### Graph Visualization
 
-![Social Network Graph](../src/img/social_network3.png)
+![Social Network Graph](../img/social_network3.png)
 
 The graph is visualized using **matplotlib** to show the connections among individuals.
 

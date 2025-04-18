@@ -29,7 +29,7 @@ This project utilizes the networkx library to create and analyze a simple undire
 
 The graph is visualized using matplotlib, providing a clear representation of the social network and the relationships among individuals.
 
-![Social Network Graph](../src/img/social_network.png)
+![Social Network Graph](../img/social_network.png)
 
 ### Usage
 
